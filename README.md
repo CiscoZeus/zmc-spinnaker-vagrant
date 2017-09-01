@@ -14,6 +14,7 @@ bash /vagrant/setup.sh
 
 ## If you want to try docker 
 ```
+sudo su
 docker pull gcr.io/spinnaker-marketplace/halyard:stable
 mkdir -p ~/.hal
 docker run --name halyard -d -v ~/.hal:/root/.hal \
