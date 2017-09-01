@@ -8,6 +8,7 @@
 ```
 vagrant up
 vagrant ssh 
+# TODO: add "Y" "secret" "secret"
 bash /vagrant/setup.sh
 ```
 
