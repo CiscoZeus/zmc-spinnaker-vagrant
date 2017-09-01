@@ -1,8 +1,8 @@
 # zmc-spinnaker-vagrant
 
-Prerequisites
-Host System : Ubuntu 16.04
-sudo apt-get install vagrant // TODO: add prereq for vagrant
+## Prerequisites
+* Host System : Ubuntu 16.04
+* sudo apt-get install vagrant // TODO: add prereq for vagrant
 
 
 ```
@@ -11,7 +11,7 @@ vagrant ssh
 bash /vagrant/setup.sh
 ```
 
-# If you want to try docker 
+## If you want to try docker 
 ```
 docker run --name halyard -d -v ~/.hal:/root/.hal \
     -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
