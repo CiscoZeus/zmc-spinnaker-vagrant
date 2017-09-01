@@ -17,7 +17,9 @@ bash /vagrant/setup.sh
 sudo su
 docker pull gcr.io/spinnaker-marketplace/halyard:stable
 mkdir -p ~/.hal
-docker run --name halyard -d -v ~/.hal:/root/.hal \
+docker run --name halyard -d \
+    -v $PWD:/tools/
+    -v ~/.hal:/root/.hal \
     -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
     -e AWS_REGION=us-west-2 \
     -e AWS_BUCKET=zeus-multicloud-spinnaker \
