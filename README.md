@@ -2,7 +2,7 @@
 
 ## Prerequisites
 * Host System : Ubuntu 16.04
-* sudo apt-get install vagrant // TODO: add prereq for vagrant
+* sudo apt-get install vagrant // TODO: add prereq for vagrant; 1.9.3
 
 
 ```
