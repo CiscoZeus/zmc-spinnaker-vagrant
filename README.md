@@ -14,6 +14,8 @@ bash /vagrant/setup.sh
 
 ## If you want to try docker 
 ```
+docker pull gcr.io/spinnaker-marketplace/halyard:stable
+mkdir -p ~/.hal
 docker run --name halyard -d -v ~/.hal:/root/.hal \
     -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
     -e AWS_REGION=us-west-2 \
