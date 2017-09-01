@@ -27,4 +27,5 @@ docker run --name halyard -d -v ~/.hal:/root/.hal \
     -e AWS_ROLE=$AWS_ROLE \
     -p 9000:9000 \
     gcr.io/spinnaker-marketplace/halyard:stable
+docker exec -it halyard bash
 ```
