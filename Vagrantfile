@@ -85,6 +85,6 @@ Vagrant.configure("2") do |config|
     apt-get -y update
     apt-get -y upgrade
     apt-get -y install docker.io
-    curl -o / https://raw.githubusercontent.com/spinnaker/halyard/master/install/stable/InstallHalyard.sh
+    curl -o /InstallHalyard.sh https://raw.githubusercontent.com/spinnaker/halyard/master/install/stable/InstallHalyard.sh
   SHELL
 end

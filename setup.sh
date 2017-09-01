@@ -1,5 +1,5 @@
-sudo chmod +x /home/vagrant/InstallHalyard.sh
-sudo bash /home/vagrant/InstallHalyard.sh
+sudo chmod +x /InstallHalyard.sh
+sudo bash /InstallHalyard.sh
 hal config version edit --version "1.1.2"
 
 hal config storage s3 edit \
