@@ -27,8 +27,9 @@ bash /vagrant/setup.sh
 ```
 sudo docker pull gcr.io/spinnaker-marketplace/halyard:stable
 sudo mkdir -p ~/.hal
+# if in vagrant cd /vagrant
 sudo docker run --name halyard -d \
-    -v /vagrant:/tools/ \
+    -v /$PWD:/tools/ \
     -v ~/.hal:/root/.hal \
     -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
     -e AWS_REGION=us-west-2 \
