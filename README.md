@@ -17,7 +17,7 @@ sudo su
 docker pull gcr.io/spinnaker-marketplace/halyard:stable
 mkdir -p ~/.hal
 docker run --name halyard -d \
-    -v /home/vagrant:/tools/ \
+    -v /vagrant:/tools/ \
     -v ~/.hal:/root/.hal \
     -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
     -e AWS_REGION=us-west-2 \
