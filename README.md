@@ -17,7 +17,7 @@ bash /vagrant/setup.sh
 sudo su
 docker pull gcr.io/spinnaker-marketplace/halyard:stable
 mkdir -p ~/.hal
-docker run --name halyard -d \
+sudo docker run --name halyard --rm \
     -v $PWD:/tools/ \
     -v ~/.hal:/root/.hal \
     -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
@@ -27,7 +27,8 @@ docker run --name halyard -d \
     -e AWS_ACCOUNT=$AWS_ACCOUNT \
     -e AWS_ACCOUNT_ID=$AWS_ACCOUNT_ID \
     -e AWS_ROLE=$AWS_ROLE \
+    -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
     -p 9000:9000 \
     gcr.io/spinnaker-marketplace/halyard:stable
-docker exec -it halyard bash
+sudo docker exec --user nobody -it halyard bash
 ```
