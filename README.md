@@ -13,10 +13,9 @@ bash /vagrant/setup.sh
 
 ## If you want to try docker 
 ```
-sudo su
-docker pull gcr.io/spinnaker-marketplace/halyard:stable
-mkdir -p ~/.hal
-docker run --name halyard -d \
+sudo docker pull gcr.io/spinnaker-marketplace/halyard:stable
+sudo mkdir -p ~/.hal
+sudo docker run --name halyard -d \
     -v /vagrant:/tools/ \
     -v ~/.hal:/root/.hal \
     -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
@@ -28,5 +27,5 @@ docker run --name halyard -d \
     -e AWS_ROLE=$AWS_ROLE \
     -p 9000:9000 \
     gcr.io/spinnaker-marketplace/halyard:stable
-docker exec -it halyard bash
+sudo docker exec -it halyard bash
 ```
