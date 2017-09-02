@@ -26,7 +26,7 @@ bash /vagrant/setup.sh
 ## If you want to try docker 
 ```
 sudo docker pull gcr.io/spinnaker-marketplace/halyard:stable
-sudo mkdir -p ~/.hal
+mkdir -p ~/.hal
 # if in vagrant cd /vagrant
 sudo docker run --name halyard -d \
     -v /$PWD:/tools/ \
