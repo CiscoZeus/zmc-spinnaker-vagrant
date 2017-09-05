@@ -8,11 +8,11 @@
 Set these in your local environment in your ~/.bashrc, ~/.profile, or /etc/environment (in Ubuntu 16 I used /etc/environment)
 
 * AWS_ACCESS_KEY_ID
-* AWS_REGION
-* AWS_BUCKET
+* AWS_REGION=us-west-2
+* AWS_BUCKET=zeus-multicloud-spinnaker
 * AWS_ACCOUNT
 * AWS_ACCOUNT_ID
-* AWS_ROLE
+* AWS_ROLE=role/spinnakerManaged
 * AWS_SECRET_ACCESS_KEY
 
 Make sure you're not a sudo user:
