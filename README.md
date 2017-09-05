@@ -5,7 +5,7 @@
 * sudo apt-get install vagrant // TODO: add prereq for vagrant; 1.9.3
 
 ## Setup
-Set these in your local environment in your ~/.bashrc, ~/.profile, or /etc/environment
+Set these in your local environment in your ~/.bashrc, ~/.profile, or /etc/environment (in Ubuntu 16 I used /etc/environment)
 
 AWS_ACCESS_KEY_ID
 AWS_REGION
