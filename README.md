@@ -33,6 +33,7 @@ ssh -L 9000:localhost:9000 -L 8084:localhost:8084 -L 8087:localhost:8087 vagrant
 
 In your machine with browser access:
 localhost:9000
+If you want to use another ip address; add -g to ssh and change localhost to the ip you want to use
 
 ## If you want to try docker 
 ```
