@@ -18,13 +18,21 @@ Set these in your local environment in your ~/.bashrc, ~/.profile, or /etc/envir
 
 Make sure you're not a sudo user:
 
+resources: https://stackoverflow.com/questions/44541839/port-forwarding-on-spinnaker
 ```
 vagrant up
 vagrant ssh 
 # to see the commands run include -x
 bash -x /vagrant/setup.sh
 curl localhost:9000
+# below will forward and then go to machine with browser; leave it rnning in a separate shell
+ssh -A -L 9000:localhost:9000 -L 8084:localhost:8084 -L 8087:localhost:8087 user@ip-of-machine-with-browser-access
+ssh -L 9000:localhost:9000 -L 8084:localhost:8084 -L 8087:localhost:8087 vagrant@<vagrant ip address> 
+
 ```
+
+In your machine with browser access:
+localhost:9000
 
 ## If you want to try docker 
 ```
