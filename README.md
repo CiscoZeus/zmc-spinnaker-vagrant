@@ -20,7 +20,9 @@ Make sure you're not a sudo user:
 ```
 vagrant up
 vagrant ssh 
-bash /vagrant/setup.sh
+# to see the commands run include -x
+bash -x /vagrant/setup.sh
+curl localhost:9000
 ```
 
 ## If you want to try docker 
