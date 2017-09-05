@@ -16,5 +16,15 @@ hal config provider aws enable
 
 hal config deploy edit --type localdebian
 
+sudo "host: 0.0.0.0" | tee \
+    ~/.hal/default/service-settings/gate.yml \
+    ~/.hal/default/service-settings/deck.yml
+
+hal config security ui edit \
+    --override-base-url http://192.168.33.10:9000
+
+hal config security api edit \
+    --override-base-url http://192.168.33.10:8084
+
 sudo hal deploy apply
 sudo hal deploy connect
