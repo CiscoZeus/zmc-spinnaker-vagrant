@@ -89,6 +89,7 @@ hal config provider google account add my-gce-account --project $GCE_PROJECT \
     CR_REPOSITORIES=snavien/spin-kub-demo
     CR_USERNAME=snavien
 
+    hal config provider docker-registry enable
     hal config provider docker-registry account add my-docker-registry \
         --address $CR_ADDRESS \
         --repositories $CR_REPOSITORIES \
