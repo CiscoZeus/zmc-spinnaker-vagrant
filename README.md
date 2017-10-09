@@ -23,7 +23,7 @@ resources: https://stackoverflow.com/questions/44541839/port-forwarding-on-spinn
 vagrant up
 vagrant ssh
 # to see the commands run include -x
-bash -x /vagrant/setup.sh
+bash -x /vagrant/setup-google.sh
 curl localhost:9000
 # below will forward and then go to machine with browser; leave it rnning in a separate shell
 # ssh -A -L 9000:localhost:9000 -L 8084:localhost:8084 -L 8087:localhost:8087 user@ip-of-machine-with-browser-access

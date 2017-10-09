@@ -39,9 +39,9 @@ Vagrant.configure("2") do |config|
   # accessing "localhost:8080" will access port 80 on the guest machine.
   config.vm.network "forwarded_port", guest: 9000, host: 9000, autocorrect: true
   config.vm.network "forwarded_port", guest: 8084, host: 8084, autocorrect: true
-  config.vm.network "forwarded_port", guest: 8087, host: 8087, autocorrect: true 
+  config.vm.network "forwarded_port", guest: 8087, host: 8087, autocorrect: true
   config.vm.network "forwarded_port", guest: 8083, host: 8083, autocorrect: true
-  config.vm.network "forwarded_port", guest: 8088, host: 8088, autocorrect: true
+  config.vm.network "forwarded_port", guest: 8088, host: 9088, autocorrect: true
   config.vm.network "forwarded_port", guest: 8089, host: 8089, autocorrect: true
 
   # Create a private network, which allows host-only access to the machine
@@ -85,7 +85,7 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision "shell", inline: $set_environment_variables, run: "always"
+  #config.vm.provision "shell", inline: $set_environment_variables, run: "always"
 
   config.vm.provision "shell", run: "always", inline: <<-SHELL
     apt-get -y update
